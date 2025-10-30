@@ -78,7 +78,6 @@
       <div class="row" style="justify-content:space-between; align-items:flex-end; gap:8px">
         <div>
           <h1>MiC 부스 – 가위바위보</h1>
-          <div class="muted">총 5판 중 3판 이상 이기면 도장 지급 🎯</div>
         </div>
         <div class="panel">
           <button id="reset" title="게임 초기화">↻ 재시작</button>
@@ -116,7 +115,7 @@
         <div class="row" style="justify-content:space-between; align-items:center">
           <div class="hint">
             🎯 5판 중 3판 이상 승리 시 <b>도장 지급</b>.<br>
-            🏆 5판 전부 승리한 <b>선착순 1명</b>에게 특별 선물!
+            🏆 5판 전부 승리한 <b>선착순 1명</b>에게 특별 선물! (부스로 오세요)
           </div>
           <button id="share" class="seg" title="현재 설정 공유">링크 공유</button>
         </div>
@@ -157,7 +156,7 @@
   }
 
   function updateDisplay(){
-    scoreEl.textContent = `${you} : ${cpu} (${rounds}/${totalRounds})`;
+    scoreEl.textContent = `${you} : ${cpu}`;
   }
 
   function finish(msg,cls){
@@ -188,7 +187,7 @@
       }else if(you >= 3){
         finish('🎉 축하합니다! 도장 지급 😊','r-win');
       }else{
-        finish('😅 다시 시도해보세요요','r-lose');
+        finish('😅 다시 시도해보세요','r-lose');
       }
     }
   }));
