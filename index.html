@@ -47,9 +47,11 @@
       background:#10132a; color:var(--ink); border:1px solid #222856;
       font-size: clamp(1.05rem, 1.4vw + .9rem, 1.6rem);
       font-weight:800; letter-spacing:.02em;
-      display:flex; flex-direction:column; align-items:center; gap:6px;
+      display:flex; flex-direction:row; align-items:center; justify-content:center; gap:8px;
       transition:transform .06s ease, box-shadow .12s ease;
+      white-space: nowrap; /* 줄바꿈 방지 */
     }
+
     button.choice:active{transform:scale(.98)}
     .emo{font-size: clamp(2rem, 6vw, 3.2rem)}
 
@@ -196,7 +198,7 @@
   resetBtn.addEventListener('click',()=>{
     you=0; cpu=0; rounds=0; locked=false;
     youPick.innerHTML='–'; cpuPick.innerHTML='–';
-    scoreEl.textContent='0 : 0 (0/5)'; resultEl.textContent='';
+    scoreEl.textContent='0 : 0'; resultEl.textContent='';
   });
 
   shareBtn.addEventListener('click', async ()=>{
