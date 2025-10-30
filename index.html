@@ -94,7 +94,7 @@
           <div class="col" style="align-items:center">
             <div class="muted">스코어</div>
             <div id="score" class="big">0 : 0 (0/5)</div>
-            <div class="hint">5판 고정 | 3승 이상 도장 지급</div>
+            <div class="hint">5판 중 3승 이상 도장 지급</div>
           </div>
           <div class="col" style="align-items:center">
             <h2>컴퓨터</h2>
@@ -115,7 +115,7 @@
       <div class="box" style="margin-top:12px">
         <div class="row" style="justify-content:space-between; align-items:center">
           <div class="hint">
-            🎯 기준: 5판 중 3판 이상 승리 시 <b>도장 지급</b>.<br>
+            🎯 5판 중 3판 이상 승리 시 <b>도장 지급</b>.<br>
             🏆 5판 전부 승리한 <b>선착순 1명</b>에게 특별 선물!
           </div>
           <button id="share" class="seg" title="현재 설정 공유">링크 공유</button>
@@ -123,8 +123,7 @@
       </div>
 
       <div class="foot" style="margin-top:10px">
-        <div>© Ajou Math MiC | 부스용 웹게임</div>
-        <div class="qr">총 5판 고정 버전</div>
+        <div>© Ajou Math MiC</div>
       </div>
     </div>
   </div>
@@ -185,11 +184,11 @@
 
     if(rounds === totalRounds){
       if(you === 5){
-        finish('🎯 5전 전승! 선착순 1등입니다 🏆','r-win');
+        finish('🏆 5판 모두 승리! 부스로 오세요','r-win');
       }else if(you >= 3){
         finish('🎉 축하합니다! 도장 지급 😊','r-win');
       }else{
-        finish('😅 아쉽지만 다음 기회에…','r-lose');
+        finish('😅 다시 시도해보세요요','r-lose');
       }
     }
   }));
