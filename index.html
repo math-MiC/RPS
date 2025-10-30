@@ -35,10 +35,10 @@
     @media (min-width:720px){ .grid-2{grid-template-columns:1fr 1fr} }
     .box{background:#0f1224; border:1px solid #242947; border-radius:16px; padding:12px}
     .score{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:8px}
-    .score h2{margin:0; font-size:clamp(1.1rem,1.2rem + .6vw,1.8rem)}
+    .score h2{margin:0; font-size:1.6rem}
     .badge{
-      padding:4px 10px; border-radius:999px; font-weight:700;
-      font-size:.9rem; letter-spacing:.02em; white-space:nowrap;
+      padding:6px 14px; border-radius:999px; font-weight:700;
+      font-size:1rem; letter-spacing:.02em; white-space:nowrap;
     }
     .b-win{background:rgba(91,227,106,.12); color:var(--win); border:1px solid rgba(91,227,106,.35)}
     .b-lose{background:rgba(255,107,107,.12); color:var(--lose); border:1px solid rgba(255,107,107,.35)}
@@ -47,21 +47,20 @@
     .choices{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
     button.choice{
       appearance:none; outline:0; border:0;
-      padding:20px 16px; border-radius:18px;
+      height:100px;                       /* 높이 고정 */
+      border-radius:18px;
       background:#10132a; color:var(--ink);
       border:1px solid #222856;
-      font-size: clamp(1.05rem, 1.4vw + .9rem, 1.6rem);
+      font-size:1.4rem;
       font-weight:800; letter-spacing:.02em;
-      display:flex; flex-direction:row; align-items:center; justify-content:center; gap:10px;
-      min-height:80px;
+      display:flex; align-items:center; justify-content:center; gap:10px;
       transition:transform .06s ease, box-shadow .12s ease;
       white-space:nowrap;
     }
     button.choice:active{transform:scale(.98)}
-    .emo{font-size: clamp(2rem, 6vw, 3.2rem)}
+    .emo{font-size:2rem;}
 
     .panel{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
-    .seg{background:#0f1224; border:1px solid #242947; border-radius:12px; padding:6px}
     #reset{
       background:var(--pri); color:#fff; border:none;
       font-weight:700; border-radius:10px; padding:10px 14px;
@@ -72,10 +71,9 @@
 
     .result{margin-top:10px; text-align:center; font-weight:900; letter-spacing:.02em}
     .r-win{color:var(--win)} .r-lose{color:var(--lose)} .r-draw{color:var(--draw)}
-    .big{font-size: clamp(1.3rem, 1.6rem + 1vw, 2.3rem)}
+    .big{font-size:1.8rem}
     .hint{font-size:.92rem; color:var(--sub)}
     .foot{display:flex; justify-content:space-between; gap:8px; flex-wrap:wrap; color:var(--sub); font-size:.9rem}
-    .qr{opacity:.9}
     .hidden{display:none}
   </style>
 </head>
